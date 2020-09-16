@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/board"
+    tools:context=".Best_resoult">
+
+
+    <TextView
+        android:id="@+id/eng_rm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agnielski średni:"
+        android:textColor="#d2d4dc"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/eng_rh"
+        app:layout_constraintStart_toStartOf="@+id/eng_re"
+        app:layout_constraintTop_toBottomOf="@+id/eng_re" />
+
+    <TextView
+        android:id="@+id/eng_re"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agnielski łatwy:"
+        android:textColor="#d2d4dc"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/eng_rm"
+        app:layout_constraintStart_toStartOf="@+id/math_rh"
+        app:layout_constraintTop_toBottomOf="@+id/math_rh" />
+
+    <TextView
+        android:id="@+id/math_rh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matematyka Trudna:"
+        android:textColor="#d2d4dc"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/eng_re"
+        app:layout_constraintStart_toStartOf="@+id/math_rm"
+        app:layout_constraintTop_toBottomOf="@+id/math_rm" />
+
+    <TextView
+        android:id="@+id/math_rm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matematyka średna:"
+        android:textColor="#d2d4dc"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/math_rh"
+        app:layout_constraintStart_toStartOf="@+id/math_re"
+        app:layout_constraintTop_toBottomOf="@+id/math_re" />
+
+    <TextView
+        android:id="@+id/math_re"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matematyka łatwa:"
+        android:textColor="#d2d4dc"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/math_rm"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Najlepsze Wyniki"
+        android:textColor="#d2d4dc"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/math_re"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/eng_rh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agnielski Trudny: "
+        android:textColor="#d2d4dc"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/eng_rm"
+        app:layout_constraintTop_toBottomOf="@+id/eng_rm" />
+</androidx.constraintlayout.widget.ConstraintLayout>

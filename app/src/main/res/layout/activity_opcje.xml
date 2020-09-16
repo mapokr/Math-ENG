@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Opcje"
+    android:background="@drawable/board">
+
+    <CheckBox
+        android:id="@+id/check_hard"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="32dp"
+        android:textStyle="bold"
+        android:textColor="#d2d4dc"
+        android:text="TRUDNY"
+        app:layout_constraintBottom_toTopOf="@+id/check_eng"
+        app:layout_constraintEnd_toEndOf="@+id/check_math"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/check_eng" />
+
+    <CheckBox
+        android:id="@+id/check_medium"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="32dp"
+        android:text="ŚREDNI"
+        android:textColor="#d2d4dc"
+        app:layout_constraintBottom_toTopOf="@+id/check_hard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="32dp"
+        android:text="POZIOM TRUDNOSCI I KATEGORIA"
+        android:textStyle="bold"
+        android:textColor="#d2d4dc"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/check_easy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_easy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:textStyle="bold"
+        android:textColor="#d2d4dc"
+        android:layout_marginBottom="32dp"
+        android:checked="true"
+        android:text="ŁATWY"
+        app:layout_constraintBottom_toTopOf="@+id/check_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_eng"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="76dp"
+        android:textColor="#d2d4dc"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:text="ANGIELSKI"
+        app:layout_constraintBottom_toTopOf="@+id/save_button"
+        app:layout_constraintEnd_toStartOf="@+id/check_math"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/save_button" />
+
+    <CheckBox
+        android:id="@+id/check_math"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="76dp"
+        android:layout_weight="1"
+        android:checked="true"
+        android:textColor="#d2d4dc"
+        android:textStyle="bold"
+        android:text="MATEMATYKA"
+        app:layout_constraintBottom_toTopOf="@+id/save_button"
+        app:layout_constraintEnd_toEndOf="@+id/save_button" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="124dp"
+        android:background="@drawable/button_shape"
+        android:text="ZAPISZ USTAWIENIA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

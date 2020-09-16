@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Flashcards"
+        android:id="@+id/Flip"
+        android:icon="@drawable/ic_flip_to_back"/>
+    <item android:title="theory"
+        android:id="@+id/learn"
+        android:icon="@drawable/ic_menu_book"/>
+    <item android:title="Quiz"
+        android:id="@+id/quiz2"
+        android:icon="@drawable/ic_try"/>
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/first_teach"
+    app:startDestination="@id/Flip">
+    <fragment
+        android:id="@+id/Flip"
+        android:name="com.example.mathenggame.flip"
+        android:label="fragment_flip"
+        tools:layout="@layout/fragment_flip" />
+    <fragment
+        android:id="@+id/learn"
+        android:name="com.example.mathenggame.Learn"
+        android:label="fragment_learn"
+        tools:layout="@layout/fragment_learn" />
+    <fragment
+        android:id="@+id/quiz2"
+        android:name="com.example.mathenggame.Quiz"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
+</navigation>
