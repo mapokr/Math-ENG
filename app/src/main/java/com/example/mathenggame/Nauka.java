@@ -18,6 +18,7 @@ public class Nauka extends AppCompatActivity {
     private TextView question,count_view;
     private Cursor c;
     private String tmp=" ";
+    private String asd = "test";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
