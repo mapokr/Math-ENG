@@ -1,5 +1,7 @@
 package com.example.mathenggame;
 
+import android.content.pm.ActivityInfo;
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,36 +9,23 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Quiz#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class Quiz extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     public Quiz() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Quiz.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Quiz newInstance(String param1, String param2) {
         Quiz fragment = new Quiz();
         Bundle args = new Bundle();
@@ -54,11 +43,122 @@ public class Quiz extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    private Button ans_1,ans_2,ans_3,start_game;
+    private int count=0;
+    private zadania_matematyka sld;
+    private TextView question,count_view;
+    private Cursor c;
+    private String tmp=" ";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quiz, container, false);
+        View v = inflater.inflate(R.layout.fragment_quiz, container, false);
+        sld = new zadania_matematyka(getActivity());
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        ans_1 =(Button) v.findViewById(R.id.anwser_1);
+        ans_2 =(Button) v.findViewById(R.id.anwser_2);
+        ans_3 =(Button) v.findViewById(R.id.anwser_3);
+        start_game =(Button) v.findViewById(R.id.start_game_button);
+        question = (TextView) v.findViewById(R.id.question_view);
+        count_view = (TextView) v.findViewById(R.id.correct_count);
+        start_game.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.play_sound();
+                set_quest();
+                v.setVisibility(v.GONE);
+            }
+        });
+        ans_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                click_button(1);
+                MainActivity.play_sound();
+            }
+        });
+        ans_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                click_button(2);
+                MainActivity.play_sound();
+            }
+
+        });
+        ans_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                click_button(3);
+                MainActivity.play_sound();
+            }
+
+        });
+        return v;
+    }
+    public void click_button(int x){
+        if(!tmp.equals(" ")) {
+            switch (x) {
+                case 1:
+                    if (ans_1.getText().equals(tmp)) {
+
+                        count += 1;
+                        set_quest();
+
+
+
+                    } else {
+                        set_quest();
+                    }
+                    break;
+                case 2:
+                    if (ans_2.getText().equals(tmp)) {
+                        //  System.out.println("2");
+                        count += 1;
+                        set_quest();
+
+
+                    } else {
+                        set_quest();
+                    }
+                    break;
+                case 3:
+                    if (ans_3.getText().equals(tmp)) {
+                        //  System.out.println("3");
+                        count += 1;
+                        set_quest();
+
+
+                    } else {
+                        set_quest();
+                    }
+                    break;
+                default:
+                    set_quest();
+
+            }
+        }
+        else{
+            Toast.makeText(getActivity(),"Musisz wystartować grę", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void set_quest(){
+        c =sld.GetRandRowDD();
+        if(c.getCount()==0){
+            System.out.println("on_click_f");
+        }
+        else{
+            while(c.moveToNext()){
+
+                ans_1.setText(c.getString(1).toString());
+                ans_2.setText(c.getString(3).toString());
+                ans_3.setText(c.getString(2).toString());
+                question.setText(c.getString(0).toString());
+                count_view.setText("PKT: "+count);
+                tmp =c.getString(4).toString();
+
+
+            }
+
+        }
+
     }
 }

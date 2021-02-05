@@ -18,6 +18,7 @@ public class load_activity extends AppCompatActivity {
                                       public void run() {
                                           Intent load_screen = new Intent(load_activity.this,MainActivity.class);
                                           startActivity(load_screen);
+                                       
                                       }
                                   }, SPLASH
         );

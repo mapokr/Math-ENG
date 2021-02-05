@@ -169,7 +169,12 @@ public class Game_Time extends AppCompatActivity {
             int x =Opcje.get_state();
 
                sld.Insert_Result(count);
-               save_new_res();
+               try {
+                   save_new_res();
+               }finally {
+
+               }
+
             }
         };
         cdt.start();
@@ -187,7 +192,12 @@ public class Game_Time extends AppCompatActivity {
             }
         });
         AlertDialog as = Ad.create();
-        as.show();
+        try {
+            as.show();
+        } finally {
+
+        }
+
         start_game.setVisibility(View.VISIBLE);
     }
 
