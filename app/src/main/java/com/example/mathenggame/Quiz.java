@@ -2,6 +2,7 @@ package com.example.mathenggame;
 
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -142,6 +143,7 @@ public class Quiz extends Fragment {
     }
     public void set_quest(){
         c =sld.GetRandRowDD();
+
         if(c.getCount()==0){
             System.out.println("on_click_f");
         }

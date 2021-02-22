@@ -91,6 +91,8 @@ public class zadania_matematyka extends SQLiteOpenHelper {
 
         return row;
     }
+
+    // m_easy
     public boolean insert_value(){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -113,10 +115,10 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         }
         // \u221A pierwisatek
         //m_medium
-        String[] pmm = {"2\u2074","3\u2082","4\u2083","5\u2083","4\u221A","121\u221A","49\u221A","36\u221A","25\u221A","100\u221A"};
-        String[] omm1 = {"10","3","64","32","11","11","12","12","8","66"};
-        String[] omm2 = {"8","6","12","125","2","4","7","5","5","10"};
-        String[] omm3 = {"16","9","8","2","33","6","15","6","4","20"};
+        String[] pmm = {"1/2 1/2","3\u2082","4\u2083","5\u2083","4\u221A","121\u221A","49\u221A","36\u221A","25\u221A","100\u221A"};
+        String[] omm1 = {"1/4","3","64","32","11","11","12","12","8","66"};
+        String[] omm2 = {"2/4","6","12","125","2","4","7","5","5","10"};
+        String[] omm3 = {"3/4","9","8","2","33","6","15","6","4","20"};
         int[] pomm = {16,9,64,125,2,11,7,6,5,10};
         for(int i=0;i<pmm .length;i++){
             ctv.put(PYTANIE_,pmm [i]);
@@ -141,11 +143,11 @@ public class zadania_matematyka extends SQLiteOpenHelper {
             r= db.insert(NAME3, null, ctv);
         }
         //e_easy
-        String[] pee = {"kot","pies","dom","noga","oko","serce","ręka","głowa","nóż","słońce"};
-        String[] oee1 = {"cat",  "cat",  "short",    "neck",    "feather",   "cut",   "kind",   "head", "swim",    "or"};
-        String[] oee2 = {"able",   "dog",  "house",    "leg",  "eye",    "key",   "elbow",   "kiss",   "knife",    "lift"};
-        String[] oee3 = {"face",   "family",    "flat", "arm",  "few",  "heart"  ,"hand",    "hand", "run",  "sun"};
-        String [] poee = {"cat","dog","house","leg","eye","heart","hand","head","knife","sun"};
+        String[] pee = {"dodawanie","odejmowanie","dzielenie","mnożenie","kwadrat","koło","trójkąt","minus","suma","cyfra"};
+        String[] oee1 = {"addition",  "cat",  "short",    "neck",    "feather",   "cut",   "kind",   "minus", "swim",    "or"};
+        String[] oee2 = {"able",   "subtraction",  "division",    "multiplication",  "square",    "key",   "elbow",   "kiss",   "sum",    "lift"};
+        String[] oee3 = {"face",   "family",    "flat", "arm",  "few",  "circle"  ,"hand",    "triangle", "run",  "digit"};
+        String [] poee = {"addition","subtraction","division","multiplication","square","circle","triangle","minus","sum","digit"};
         for(int i=0;i<pee .length;i++){
             ctv.put(PYTANIE_,pee [i]);
             ctv.put(ODP_1_,oee1[i]);
@@ -155,11 +157,11 @@ public class zadania_matematyka extends SQLiteOpenHelper {
             r= db.insert(NAME4, null, ctv);
         }
         //e_medium
-        String[] peh = {"absolutny","zajęty","nieciekawy","istnieć","trudny","sędzia","mieszać","nowoczesny","sprawdzać","dziwny"};
-        String[] oeh1 = {"absolute","dry","get","now","hard","lick","mix","ability","lost","odd"};
-        String[] oeh2 = {"anybody","busy","earn","exist","hat","mirror","box","modern","check","root"};
-        String[] oeh3 = {"bubble","car","dull","hair","join","judge","raw","new","bus","busy"};
-        String[] poeh = {"absolute","busy","dull","exist","hard","judge","mix","modern","check","odd"};
+        String[] peh = {"średnica","kąt","promień","zbiór","potęga","ułamek zwykły","sześcian","procent","stożek","prostokąt"};
+        String[] oeh1 = {"diameter","dry","get","now","power","lick","cube","ability","lost","odd"};
+        String[] oeh2 = {"anybody","angle","earn","set","hat","mirror","box","per cent","cone","root"};
+        String[] oeh3 = {"bubble","car","radius","hair","join","fraction","raw","new","bus","busy"};
+        String[] poeh = {"diameter","angle","radius","set","power","fraction","cube","per cent","cone","rectangle"};
         for(int i=0;i<peh .length;i++){
             ctv.put(PYTANIE_,peh [i]);
             ctv.put(ODP_1_,oeh1[i]);
@@ -170,11 +172,11 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         }
 
         //e_hard
-        String[] pem = {"ide do sklepu","co lubisz jesc","ile masz lat","gdzie mieszkasz ?","jaki jest plan","zgubiłem się ","lubie spiewać","wygrałem turniej","jestem zmeczony","jak to zrobiles? "};
-        String[] oem1 = {"I go to the store","what do you like to eat","how old are you","where are you dressing?","today is Tuesday","I hid","I like to sing","I created a tournament","I'm tired","how can I do that?"};
-        String[] oem2 = {"I love dogs","what are you doing tomorrow","what's your name","will you marry me ?","what's the plan","I went out","march out","I won the tournament","I do not know what to do","teach me this"};
-        String[] oem3 = {"I like you","Hi buddy","you like me?","where do you live ?","I run to school","I got lost","help me","I lost the tournament","I am refreshed","how did you do that?"};
-        String[] poem = {"I go to the store","what do you like to eat","how old are you","where do you live ?","what's the plan","I got lost","I like to sing","I won the tournament","I'm tired","how did you do that?"};
+        String[] pem = {"dolewać oliwy do ognia","ciągle, w kółko","sztuka dla sztuki","zdrów jak ryba","na pierwszy rzut oka","wypadki chodzą po ludziach ","wszystko dobre, co się dobrze kończy" /*do poprawienia*/,"innym razem","w rezultacie","przyznać się do porażki "};
+        String[] oem1 = {"add fuel to the flames","again and again","art for art is sake","where are you dressing?","today is Tuesday","I hid","all is well that ends well","I created a tournament","as a result","how can I do that?"};
+        String[] oem2 = {"I love dogs","what are you doing tomorrow","what's your name","will you marry me ?","at first glance","I went out","march out","another time","I do not know what to do","teach me this"};
+        String[] oem3 = {"I like you","Hi buddy","you like me?","as right as rain","I run to school","accidents will happen","help me","I lost the tournament","I am refreshed","admit defeat"};
+        String[] poem = {"add fuel to the flames","again and again","art for art is sake","as right as rain","at first glance","accidents will happen","all is well that ends well","another time","as a result","admit defeat"};
         for(int i=0;i<pem .length;i++){
             ctv.put(PYTANIE_,pem [i]);
             ctv.put(ODP_1_,oem1[i]);

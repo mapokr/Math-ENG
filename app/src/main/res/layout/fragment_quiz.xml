@@ -7,6 +7,7 @@
     android:background="@drawable/board"
     tools:context=".Quiz">
 
+
     <TextView
         android:id="@+id/correct_count"
         android:layout_width="wrap_content"
