@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -31,7 +32,6 @@ public class Game_Time extends AppCompatActivity {
         setContentView(R.layout.activity_game__time);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         sld = new zadania_matematyka(this);
-
         ans_1 =(Button) findViewById(R.id.anwser_1);
         ans_2 =(Button) findViewById(R.id.anwser_2);
         ans_3 =(Button) findViewById(R.id.anwser_3);
