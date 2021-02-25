@@ -26,7 +26,8 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         public static final String NAME5 = "eng_medium";
         public static final String NAME6 = "eng_hard";
         public static final String NAME7 = "Results";
-        public static final String [] ALL_DB = {NAME,NAME2,NAME3,NAME4,NAME5,NAME6};
+        public static final String NAME8 = "Math_F";
+        public static final String [] ALL_DB = {NAME,NAME2,NAME3,NAME4,NAME5,NAME6,NAME8};
         public static final String ID_ ="ID";
         public static final String PYTANIE_ ="PYTANIE";
         public static final String ODP_1_ ="ODP_1";
@@ -52,6 +53,7 @@ public class zadania_matematyka extends SQLiteOpenHelper {
             db.execSQL("create table " + NAME5+ " (ID INTEGER PRIMARY KEY AUTOINCREMENT,PYTANIE TEXT,ODP_1 TEXT,ODP_2 TEXT,ODP_3 TEXT,POPRAWNA_ODPOWIEDZ TEXT); ");
             db.execSQL("create table " + NAME6+ " (ID INTEGER PRIMARY KEY AUTOINCREMENT,PYTANIE TEXT,ODP_1 TEXT,ODP_2 TEXT,ODP_3 TEXT,POPRAWNA_ODPOWIEDZ TEXT); ");
             db.execSQL("create table " + NAME7+ " (ID INTEGER PRIMARY KEY AUTOINCREMENT,PRZEDMIOT TEXT,WYNIK INT,TRUDNOSC INT); ");
+            db.execSQL("create table " + NAME8+ " (ID INTEGER PRIMARY KEY AUTOINCREMENT,PYTANIE TEXT,POPRAWNA_ODPOWIEDZ TEXT); ");
 
 
         }
@@ -65,6 +67,7 @@ public class zadania_matematyka extends SQLiteOpenHelper {
          db.execSQL("DROP TABLE IF EXISTS "+ NAME5);
          db.execSQL("DROP TABLE IF EXISTS "+ NAME6);
          db.execSQL("DROP TABLE IF EXISTS "+ NAME7);
+         db.execSQL("DROP TABLE IF EXISTS "+ NAME8);
          onCreate(db);
 
 
@@ -85,6 +88,9 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Random generator= new Random();
         int x= Opcje.get_state();
+        if(x<3){
+            x=6;
+        }
         rand_int = generator.nextInt(10)+ 1;
         System.out.println(x+"zadania");
         Cursor row = db.rawQuery("select pytanie,POPRAWNA_ODPOWIEDZ from ("+ALL_DB[x]+") where id =" + rand_int ,null);
@@ -98,6 +104,7 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues ctv = new ContentValues();
         ContentValues ctv2= new ContentValues();
+        ContentValues ctv3= new ContentValues();
         long r=0;
         //m_easy
         String[] pme = {"2+2","4*3","2+5","6-2","8-1","10+2","20+10","2*20","3+5","6*6"};
@@ -192,6 +199,14 @@ public class zadania_matematyka extends SQLiteOpenHelper {
             ctv2.put("WYNIK",0);
             ctv2.put("TRUDNOSC",i);
             r= db.insert(NAME7, null, ctv2);
+        }
+        //m_fish
+        String[] pmf = {"Pole kwadratu",    "Pole prostokąta"   ,"Pole trójkąta"    ,"Obwód Kwadratu",  "Obwód Prostokąta", "obwód koła",   "Obwód deltoidu","Objętność sześcianu","Pole całkowite sześcianu","Przekątna sześcianu"};
+        String[] pomf = {"P=a*a",   "P=a*b" ,"P=\u00BD*a*h" ,"Ob=4*a",  "Ob=2*a+2*b"    ,"P=\u03C0*r\u00B2",    "Ob=2*a+2*b","V = a\u00B3","Pc=6*a\u00B2","d=a*\u221A3"};
+        for(int i=0;i<pmf .length;i++){
+            ctv3.put(PYTANIE_,pomf [i]);
+            ctv3.put(POPRAWNA_ODPOWIEDZ_,pmf[i]);
+            r= db.insert(NAME8, null, ctv3);
         }
 
 
