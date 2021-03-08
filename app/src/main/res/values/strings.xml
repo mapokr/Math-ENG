@@ -1,5 +1,44 @@
 <resources>
     <string name="app_name">Math&amp;Eng&amp;Game</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="present_simple_u">Czasu Present Simple używamy: do opisywania czynności powtarzających się i zwyczajowych, opisywania prawd ogólnych i faktów, opisywania stałych, ciągłych czynności lub stanów.</string>
+    <string name="present_simple_list">
+        <li>Opisując rzeczy</li>\n\n
+        <li>Opisywanie, streszczanie filmów</li>\n\n
+        <li>Czynności dziejące się przez dłuższy czas</li>\n\n
+        <li>Mówiąc o czynnościach powtarzających się</li>
+    </string>
+    <string name="okreslnik_czasu_present_simple">
+        W Present Simple bardzo często używamy słówek określających częstotliwość wykonywania czynności:
+    </string>
+
+    <string name="present_continues_list">
+        <li>czynności, które dzieją się w momencie mówienia o nich</li>\n\n
+        <li>konkretne plany dotyczące przyszłości </li>\n\n
+        <li>narzekanie na czyjeś przyzwyczajenia i zachowania</li>\n\n
+        <li>czynności tymczasowe, które trwają przez pewien czas, ale niekoniecznie w tej chwili</li>
+    </string>
+
+    <string name="okreslnik_czasu_present_continues">
+        W Present continues najczęściej wykorzystuje się określniki czasu takie jak":
+    </string>
+
+    <string name="past_simple_list">
+        <li>Gdy mówimy o sytuacjach które miały miejsce w zdefiniowanej przeszłości</li>\n\n
+        <li>Gdy pytamy kiedy coś się wydarzyło </li>\n\n
+        <li>Gdy mówimy o sytuacjach, które wydarzyły się w przeszłości bez konieczności dokładniego jej określania</li>\n\n
+        <li>Gdy mówimy o sytuacjach, które wydarzyły się w przeszłości i następowały krótko po sobie</li>\n\n
+        <li>Gdy używamy okresów warunkowych</li>
+    </string>
+    <string name="okreslnik_czasu_past_simple">
+        W past simple najczęściej wykorzystuje się określniki czasu takie jak":
+    </string>
+
+    <string name="past_simple_check">
+        <li>Twierdzenie: SUBJECT + VERB (II form)</li>\n
+        <li>Pytanie: DID + SUBJECT + VERB </li>\n
+        <li>Przeczenie: SUBJECT + DIDN’T + VERB</li>\n
+    </string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

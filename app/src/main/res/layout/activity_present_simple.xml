@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/board"
+    tools:context=".presentSimple">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/text_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Present Simple" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/text_h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="Czasu present simple używamy:" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/text_h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="start"
+                android:text="@string/present_simple_list"
+                android:textAlignment="textStart" />
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="20dp">
+
+                <TableRow android:background="@color/green">
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="lp." />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Twierdzenie" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Pytanie" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Przeczenie" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="I" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="I read" />
+
+                    <TextView
+                        android:id="@+id/do_1"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Do I read? " />
+
+                    <TextView
+                        android:id="@+id/dont_1"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="i don`t read" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="he/she/it" />
+
+                    <TextView
+                        android:id="@+id/s_1"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="He reads" />
+
+                    <TextView
+                        android:id="@+id/does_1"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Does she read? " />
+
+                    <TextView
+                        android:id="@+id/doesnt_1"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="She doesn`t read" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="you/we/they" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="They read " />
+
+                    <TextView
+                        android:id="@+id/do_2"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Do they read? " />
+
+                    <TextView
+                        android:id="@+id/dont_2"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="They Don`t read" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/usage5"
+                style="@style/text_h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/okreslnik_czasu_present_simple" />
+
+            <TableLayout
+                android:id="@+id/table_o"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="20dp">
+
+                <TableRow android:background="@color/green">
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Angielski" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Tlumaczenie" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="always " />
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="	zawsze" />
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="never " />
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="nigdy" />
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="often " />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="często" />
+
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="rarely" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="rzadko" />
+
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="usually " />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="	zwykle" />
+
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="every day " />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="codziennie" />
+
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="sometimes" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="czasami" />
+
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="every week " />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="co tydzień" />
+
+                </TableRow>
+
+
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
