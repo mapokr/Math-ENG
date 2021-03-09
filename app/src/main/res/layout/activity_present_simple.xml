@@ -58,6 +58,29 @@
                 android:text="@string/present_simple_list"
                 android:textAlignment="textStart" />
 
+            <TextView
+                style="@style/text_h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="Tworzenie zdań" />
+
+            <TextView
+                style="@style/text_h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:textSize="14dp"
+                android:gravity="start"
+                android:text="@string/present_simple_check"
+                android:textAlignment="textStart" />
+
             <TableLayout
                 android:id="@+id/table"
                 android:layout_width="match_parent"

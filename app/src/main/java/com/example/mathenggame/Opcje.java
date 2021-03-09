@@ -11,11 +11,21 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+
 public class Opcje extends AppCompatActivity {
 
     private static CheckBox e_check, m_check, h_check, eng_check, math_check;
     private boolean e_check_state, m_check_state, h_check_state, eng_check_state, math_check_state;
     private Button save_button;
+    FileOutputStream state= null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +104,17 @@ public class Opcje extends AppCompatActivity {
         editor.putBoolean("eng_check", eng_check.isChecked());
         editor.putBoolean("math_check", math_check.isChecked());
         editor.apply();
+        try{
+            state = openFileOutput("level.txt",MODE_PRIVATE);
+            System.out.println(get_state());
+            String asd = Integer.toString(get_state());
+            state.write(asd.getBytes());
+            state.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Toast.makeText(this, "zapisano ustawienia", Toast.LENGTH_SHORT).show();
     }
 
@@ -149,4 +170,5 @@ public class Opcje extends AppCompatActivity {
 
         return tmp;
     }
+
 }

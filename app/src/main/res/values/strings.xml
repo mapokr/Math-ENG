@@ -40,5 +40,15 @@
         <li>Przeczenie: SUBJECT + DIDN’T + VERB</li>\n
     </string>
 
+    <string name="present_simple_check">
+        <li>Twierdzenie: SUBJECT + VERB (3 os lp. dodajemy s na koncu)</li>\n
+        <li>Pytanie: DO/DOES + SUBJECT + VERB </li>\n
+        <li>Przeczenie: SUBJECT + DO/DOES + NOT + VERB</li>\n
+    </string>
+    <string name="present_continues_check">
+        <li>Twierdzenie: SUBJECT + TO BE + VERB (- ING)</li>\n
+        <li>Pytanie: TO BE + SUBJECT + VERB (- ING) </li>\n
+        <li>Przeczenie: SUBJECT + TO BE + NOT + VERB (- ING)</li>\n
+    </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

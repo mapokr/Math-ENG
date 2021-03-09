@@ -6,6 +6,13 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import android.widget.CheckBox;
@@ -14,6 +21,8 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import static java.lang.Integer.parseInt;
 
 public class zadania_matematyka extends SQLiteOpenHelper {
     Opcje check_state = new Opcje();
@@ -36,6 +45,7 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         public static final String TRUDNOSC_ ="TRUDNOSC";
         public static final String POPRAWNA_ODPOWIEDZ_ ="POPRAWNA_ODPOWIEDZ";
         private int rand_int;
+
 
     public zadania_matematyka(Context context) {
             super(context, NAME_DB, null, 1);
@@ -76,7 +86,7 @@ public class zadania_matematyka extends SQLiteOpenHelper {
     public Cursor GetRandRowDD (){
         SQLiteDatabase db = this.getWritableDatabase();
         Random generator= new Random();
-        int x= Opcje.get_state();
+        int x= parseInt(loadState());
         System.out.println(x+"zadania");
 
         rand_int = generator.nextInt(10)+ 1;
@@ -87,7 +97,7 @@ public class zadania_matematyka extends SQLiteOpenHelper {
     public Cursor GetRandOne (){
         SQLiteDatabase db = this.getWritableDatabase();
         Random generator= new Random();
-        int x= Opcje.get_state();
+        int x= parseInt(loadState());
         if(x<3){
             x=6;
         }
@@ -248,5 +258,36 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         Cursor c = db.rawQuery("Select MAX(WYNIK) from Results WHERE Trudnosc="+x,null);
         return c;
 
+    }
+    public static String loadState(){
+        String get_text = "";
+        FileInputStream load_state = null;
+        try {
+            load_state = new FileInputStream("/data/data/com.example.mathenggame/files/level.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            InputStreamReader input = new InputStreamReader(load_state);
+            BufferedReader bufor = new BufferedReader(input);
+            StringBuilder builder = new StringBuilder();
+            get_text=bufor.readLine();
+            builder.append(get_text);
+            System.out.println("kotek:"+get_text);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        finally {
+            try {
+                load_state.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return get_text;
     }
 }
