@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import static java.lang.Integer.parseInt;
+
 public class Learn extends Fragment {
 
 
@@ -44,6 +46,7 @@ public class Learn extends Fragment {
         }
     }
   private Button presentSimple,presentContinues,presentPerfect,futureSimple,pastContinues,futureContinues,pastSimple;
+    public zadania_matematyka state;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,15 +59,14 @@ public class Learn extends Fragment {
         pastContinues =(Button) v.findViewById(R.id.past_continues);
         futureContinues =(Button) v.findViewById(R.id.future_continues);
         pastSimple = (Button) v.findViewById(R.id.past_simple);
-        int x = Opcje.get_state();
-        //System.out.println(x);
+        int x = parseInt(state.loadState());
         if(x<3){
             presentSimple.setText("kwadrat");
             presentContinues.setText("prostokat");
             presentPerfect.setText("trójkąt");
             futureSimple.setText("sześcian");
-            pastContinues.setText("deltoid");
-            futureContinues.setText("koło");
+            pastContinues.setText("równania");
+            futureContinues.setText("asd ");
             pastSimple.setText("trapez");
         }
         if(x>=3)
@@ -74,7 +76,7 @@ public class Learn extends Fragment {
             presentPerfect.setText("present perfect");
             futureSimple.setText("future simple");
             pastContinues.setText("past continues");
-            futureContinues.setText("future continues");
+            futureContinues.setText("czasowniki nieregularne");
             pastSimple.setText("past simple");
         }
         presentSimple.setOnClickListener(new View.OnClickListener() {
@@ -112,6 +114,48 @@ public class Learn extends Fragment {
             }
 
         });
+        presentPerfect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(presentPerfect.getText().equals("present perfect")){
+                    open_presentperfect();
+                }
+                if(presentPerfect.getText().equals("trójkąt")){
+                    open_triangle();
+            }
+            }
+
+        });
+        futureSimple.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(futureSimple.getText().equals("future simple")){
+                    open_futureSimple();
+                }
+                if(futureSimple.getText().equals("sześcian")){
+                    open_cube();
+                }
+            }
+        });
+        pastContinues.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(pastContinues.getText().equals("past continues")){
+                    open_pastContinues();
+                }
+                if(pastContinues.getText().equals("równiania")){
+                    open_equations();
+                }
+            }
+        });
+        futureContinues.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(futureContinues.getText().equals("czasowniki nieregularne")){
+                    open_reg();
+                }
+            }
+        });
 
         return v;
     }
@@ -139,6 +183,40 @@ public class Learn extends Fragment {
     }
     public void open_trapeze(){
         Intent start = new Intent(getContext(),com.example.mathenggame.trapeze.class);
+        startActivity(start);
+    }
+    public void open_presentperfect(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.presentperfect.class);
+        startActivity(start);
+
+    }
+    public void open_futureSimple(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.futuresimple.class);
+        startActivity(start);
+
+    }
+    public void open_triangle(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.triangle.class);
+        startActivity(start);
+    }
+    public void open_cube(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.cube.class);
+        startActivity(start);
+    }
+    public void open_equations(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.equations.class);
+        startActivity(start);
+    }
+    public void open_pastContinues(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.pastcontinues.class);
+        startActivity(start);
+    }
+    public void open_reg(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.verbs.class);
+        startActivity(start);
+    }
+    public void open_asd(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.pastcontinues.class);
         startActivity(start);
     }
 }

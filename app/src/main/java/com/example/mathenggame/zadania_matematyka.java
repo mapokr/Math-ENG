@@ -87,7 +87,6 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Random generator= new Random();
         int x= parseInt(loadState());
-        System.out.println(x+"zadania");
 
         rand_int = generator.nextInt(10)+ 1;
         Cursor row = db.rawQuery("select pytanie,odp_1,odp_2,odp_3,POPRAWNA_ODPOWIEDZ from ("+ALL_DB[x]+") where id =" + rand_int ,null);
@@ -102,7 +101,6 @@ public class zadania_matematyka extends SQLiteOpenHelper {
             x=6;
         }
         rand_int = generator.nextInt(10)+ 1;
-        System.out.println(x+"zadania");
         Cursor row = db.rawQuery("select pytanie,POPRAWNA_ODPOWIEDZ from ("+ALL_DB[x]+") where id =" + rand_int ,null);
 
         return row;

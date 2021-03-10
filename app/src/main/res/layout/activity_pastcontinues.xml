@@ -4,6 +4,425 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/board"
     tools:context=".pastcontinues">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/text_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Past continues" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/text_h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="Czasu past continues używamy mówiąc o:" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/text_h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="start"
+                android:text="@string/past_continues_list"
+                android:textAlignment="textStart" />
+            <TextView
+                style="@style/text_h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="Tworzenie zdań" />
+
+            <TextView
+                style="@style/text_h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:textSize="13dp"
+                android:gravity="start"
+                android:text="@string/past_continues_check"
+                android:textAlignment="textStart" />
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="20dp">
+
+                <TableRow android:background="@color/green">
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="lp." />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Twierdzenie" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Pytanie" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Przeczenie" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="I" />
+
+                    <TextView
+                        android:id="@+id/t_i_pastContinues"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="I was reading a book at 6 pm" />
+
+                    <TextView
+                        android:id="@+id/p_i_pastContinues"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Was I reading a book at 6 pm?"/>
+
+                    <TextView
+                        android:id="@+id/pr_i_pastContinues"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="I wasn`t reading a book at 6 pm" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="he/she/it" />
+
+                    <TextView
+                        android:id="@+id/t_he_pastContinues"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="She was reading a book at 6 pm" />
+
+                    <TextView
+                        android:id="@+id/p_he_pastContinues"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="was She reading a book at 6 pm?" />
+
+                    <TextView
+                        android:id="@+id/pr_he_pastContinues"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="She wasn`t reading a book at 6 pm" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="you/we/they" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:id="@+id/t_they_pastContinues"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="We were reading a book at 6 pm" />
+
+                    <TextView
+                        android:id="@+id/p_they_pastContinues"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Were We reading a book at 6 pm? " />
+
+                    <TextView
+                        android:id="@+id/pr_they_pastContinues"
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="We weren`t reading a book at 6 pm" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/usage5"
+                style="@style/text_h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/okreslnik_czasu_past_continues" />
+
+            <TableLayout
+                android:id="@+id/table_o"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="20dp">
+
+                <TableRow android:background="@color/green">
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Angielski" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="Tlumaczenie" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="while" />
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="podczas gdy" />
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="when " />
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="kiedy" />
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="still" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="wciąż" />
+
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="all day" />
+
+                    <TextView
+                        style="@style/text_h3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="4"
+                        android:padding="5sp"
+                        android:text="cały dzień" />
+
+                </TableRow>
+                <TableRow>
+
+
+                <TextView
+
+                    style="@style/text_h3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="4"
+                    android:padding="5sp"
+                    android:text="all the time" />
+
+                <TextView
+                    style="@style/text_h3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="4"
+                    android:padding="5sp"
+                    android:text="cały czas." />
+
+            </TableRow>
+
+
+
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

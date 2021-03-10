@@ -33,6 +33,15 @@
     <string name="okreslnik_czasu_past_simple">
         W past simple najczęściej wykorzystuje się określniki czasu takie jak":
     </string>
+    <string name="okreslnik_czasu_present_perfect">
+        W present perfect najczęściej wykorzystuje się określniki czasu takie jak":
+    </string>
+    <string name="okreslnik_czasu_future_simple">
+        W future simple najczęściej wykorzystuje się określniki czasu takie jak":
+    </string>
+    <string name="okreslnik_czasu_past_continues">
+        W past continues najczęściej wykorzystuje się określniki czasu takie jak":
+    </string>
 
     <string name="past_simple_check">
         <li>Twierdzenie: SUBJECT + VERB (II form)</li>\n
@@ -50,5 +59,43 @@
         <li>Pytanie: TO BE + SUBJECT + VERB (- ING) </li>\n
         <li>Przeczenie: SUBJECT + TO BE + NOT + VERB (- ING)</li>\n
     </string>
+
+    <string name="present_perfect_list">
+        <li>czynności, która miała miejsce w przeszłości (nie określamy czasu, kiedy się wydarzyła)</li>\n\n
+        <li>Opisując czynność/stan, która rozpoczęła się w przeszłości i trwa do tej pory. </li>\n\n
+        <li>Mówiąc o niezakończonym jeszcze okresie czasu. </li>\n\n
+        <li>Opisując doświadczenia i osiągnięcia osób żyjących.</li>\
+    </string>
+    <string name="present_perfect_check">
+        <li>Twierdzenie: SUBJECT + HAVE/HAS + VERB (III form)</li>\n
+        <li>Pytanie: HAVE/HAS + SUBJECT + VERB (III form) </li>\n
+        <li>Przeczenie: SUBJECT + HAVE/HAS + NOT + VERB (III form)</li>\n
+    </string>
+    <string name="future_simple_list">
+        <li>Mówiąc o spontanicznych decyzjach</li>\n\n
+        <li>Opisując swoje przewidywania i przypuszczenia dotyczące przyszłości</li>\n\n
+        <li>Wyrażając obietnice i groźby. </li>\n\n
+        <li>Mówiąc o marzeniach i ogólnych planach na przyszłość</li>\n\n
+        <li>Opisując czynności, które naszym zdaniem będą się powtarzać w przyszłości</li>
+    </string>
+    <string name="future_simple_check">
+        <li>Twierdzenie: SUBJECT + WILL + VERB </li>\n
+        <li>Pytanie: WILL + SUBJECT+ VERB</li>\n
+        <li>Przeczenie: SUBJECT + WILL + NOT + VERB</li>\n
+    </string>
+    <string name="past_continues_list">
+        <li>Mówiąc o czynności, która odbywała się w przeszłości w sposób ciągły</li>\n\n
+        <li>Kiedy opisujemy czynność, która odbywała się w określonym momencie w przeszłości</li>\n\n
+        <li>Gdy mówimy o przynajmniej dwóch czynnościach, które odbywały się w tym samym czasie w przeszłości. </li>\n\n
+        <li>Kiedy mówimy, o jednej krótkiej czynności w przeszłości, która przerwała drugą, dłuższą. </li>\n\n
+    </string>
+    <string name="past_continues_check">
+        <li>Twierdzenie: SUBJECT + WAS/WERE + VERB (- ING) </li>\n
+        <li>Pytanie: WAS/WERE + SUBJECT+ VERB (- ING)</li>\n
+        <li>Przeczenie: SUBJECT + WAS/WERE + NOT + VERB</li>\n
+    </string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

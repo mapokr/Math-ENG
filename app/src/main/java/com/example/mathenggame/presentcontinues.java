@@ -47,7 +47,7 @@ public class presentcontinues extends AppCompatActivity {
         am_1.setSpan(red_collor,2,4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         am_1.setSpan(red_collor_2,9,12, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        am_2.setSpan(red_collor,0,4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        am_2.setSpan(red_collor,0,2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         am_2.setSpan(red_collor_2,9,12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         am_3.setSpan(red_collor,2,8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -56,7 +56,7 @@ public class presentcontinues extends AppCompatActivity {
         he_1.setSpan(red_collor,4,6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         he_1.setSpan(red_collor_2,11,14, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        he_2.setSpan(red_collor,0,7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        he_2.setSpan(red_collor,0,3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         he_2.setSpan(red_collor_2,12,15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         he_3.setSpan(red_collor,4,9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -65,7 +65,7 @@ public class presentcontinues extends AppCompatActivity {
         they_1.setSpan(red_collor,5,8, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         they_1.setSpan(red_collor_2,13,16, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        they_2.setSpan(red_collor,0,8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        they_2.setSpan(red_collor,0,4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         they_2.setSpan(red_collor_2,13,16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         they_3.setSpan(red_collor,5,11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -80,9 +80,9 @@ public class presentcontinues extends AppCompatActivity {
         change_he_2.setText(he_2);
         change_he_3.setText(he_3);
 
-        change_they_1.setText(he_1);
-        change_they_2.setText(he_2);
-        change_they_3.setText(he_3);
+        change_they_1.setText(they_1);
+        change_they_2.setText(they_2);
+        change_they_3.setText(they_3);
 
 
     }

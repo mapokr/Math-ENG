@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".trapeze"></activity>
+        <activity android:name=".equations"></activity>
+        <activity android:name=".verbs" />
+        <activity android:name=".trangle" />
+        <activity android:name=".cube" />
+        <activity android:name=".trapeze" />
         <activity android:name=".rectangle" />
         <activity android:name=".futurecontinues" />
         <activity android:name=".pastcontinues" />
