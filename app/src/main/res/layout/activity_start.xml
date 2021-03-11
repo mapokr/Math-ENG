@@ -7,65 +7,70 @@
     tools:context=".Start"
     android:background="@drawable/board">
 
-    <Button
-        android:id="@+id/learn_button"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/button_shape"
-        android:text="NAUKA"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/playwf_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_game_button" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.200"
+        tools:layout_editor_absoluteX="16dp">
 
-    <Button
-        android:id="@+id/playwf_button"
+        <Button
+            android:id="@+id/learn_button"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:text="Nauka"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/playwf_button"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:text="graj ze znajomym"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/button_shape"
-        android:text="GRAJ ZE ZNAJOMYM"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/learn_button"
-        app:layout_constraintHorizontal_bias="0.927"
-        app:layout_constraintStart_toEndOf="@+id/time_game_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.400"
+        tools:layout_editor_absoluteX="16dp">
 
-    <Button
-        android:id="@+id/time_game_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/button_shape"
-        android:text="CZAS UCIEKA"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/playwf_button"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playwf_button" />
+        <Button
+            android:id="@+id/time_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:text="czasu ucieka"
+            android:textStyle="bold"/>
 
-    <Button
-        android:id="@+id/Best_resoult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:textStyle="bold"
-        android:background="@drawable/button_shape"
-        android:text="Najlepsze wyniki"
-        app:layout_constraintBottom_toTopOf="@+id/playwf_button"
-        app:layout_constraintEnd_toEndOf="@+id/playwf_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/Best_resoult"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:text="Najlepsze wyniki"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

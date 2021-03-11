@@ -166,12 +166,13 @@ public class Game_Time extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-            int x =Opcje.get_state();
 
                sld.Insert_Result(count);
                try {
                    save_new_res();
-               }finally {
+               }catch (Exception e){
+                    System.out.println("nie udalo sie zapisac wyniku");
+               } finally {
 
                }
 
@@ -194,8 +195,12 @@ public class Game_Time extends AppCompatActivity {
         AlertDialog as = Ad.create();
         try {
             as.show();
-        } finally {
-
+        }catch (Exception e){
+            System.out.println("nie udalo sie wyswietlic wynkiu");
+        }
+        finally {
+            tmp = " ";
+            count = 0;
         }
 
         start_game.setVisibility(View.VISIBLE);

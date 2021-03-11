@@ -187,11 +187,11 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         }
 
         //e_hard
-        String[] pem = {"dolewać oliwy do ognia","ciągle, w kółko","sztuka dla sztuki","zdrów jak ryba","na pierwszy rzut oka","wypadki chodzą po ludziach ","wszystko dobre, co się dobrze kończy" /*do poprawienia*/,"innym razem","w rezultacie","przyznać się do porażki "};
-        String[] oem1 = {"add fuel to the flames","again and again","art for art is sake","where are you dressing?","today is Tuesday","I hid","all is well that ends well","I created a tournament","as a result","how can I do that?"};
+        String[] pem = {"dolewać oliwy do ognia","ciągle, w kółko","sztuka dla sztuki","zdrów jak ryba","na pierwszy rzut oka","wypadki chodzą po ludziach ","Czas leczy rany" ,"innym razem","w rezultacie","przyznać się do porażki "};
+        String[] oem1 = {"add fuel to the flames","again and again","art for art is sake","where are you dressing?","today is Tuesday","I hid","Time heals all wounds","I created a tournament","as a result","how can I do that?"};
         String[] oem2 = {"I love dogs","what are you doing tomorrow","what's your name","will you marry me ?","at first glance","I went out","march out","another time","I do not know what to do","teach me this"};
         String[] oem3 = {"I like you","Hi buddy","you like me?","as right as rain","I run to school","accidents will happen","help me","I lost the tournament","I am refreshed","admit defeat"};
-        String[] poem = {"add fuel to the flames","again and again","art for art is sake","as right as rain","at first glance","accidents will happen","all is well that ends well","another time","as a result","admit defeat"};
+        String[] poem = {"add fuel to the flames","again and again","art for art is sake","as right as rain","at first glance","accidents will happen","Time heals all wounds","another time","as a result","admit defeat"};
         for(int i=0;i<pem .length;i++){
             ctv.put(PYTANIE_,pem [i]);
             ctv.put(ODP_1_,oem1[i]);
@@ -229,7 +229,7 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         public boolean Insert_Result(int w){
             long r=0;
             String pr = " ";
-            if(Opcje.get_state()<3){
+            if(parseInt(loadState())<3){
                 pr = "Matematyka";
             }
             else{
@@ -241,7 +241,7 @@ public class zadania_matematyka extends SQLiteOpenHelper {
 
             ctv.put("PRZEDMIOT",pr);
             ctv.put("WYNIK",w);
-            ctv.put("TRUDNOSC",Opcje.get_state());
+            ctv.put("TRUDNOSC",parseInt(loadState()));
             r= db.insert(NAME7, null, ctv);
 
             if(r==-1){
