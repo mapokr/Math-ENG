@@ -52,6 +52,7 @@ public class Learn extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_learn, container, false);
+
         presentSimple = (Button) v.findViewById(R.id.present_simple);
         presentContinues = (Button) v.findViewById(R.id.present_continues);
         presentPerfect =(Button) v.findViewById(R.id.present_perfect);
@@ -65,8 +66,9 @@ public class Learn extends Fragment {
             presentContinues.setText("prostokat");
             presentPerfect.setText("trójkąt");
             futureSimple.setText("sześcian");
-            pastContinues.setText("równania");
-            futureContinues.setText("asd ");
+            pastContinues.setText("równania liniowe");
+            futureContinues.setText("nothing ");
+            futureContinues.setVisibility(View.INVISIBLE);
             pastSimple.setText("trapez");
         }
         if(x>=3)
@@ -77,6 +79,7 @@ public class Learn extends Fragment {
             futureSimple.setText("future simple");
             pastContinues.setText("past continues");
             futureContinues.setText("czasowniki nieregularne");
+            futureContinues.setVisibility(View.VISIBLE);
             pastSimple.setText("past simple");
         }
         presentSimple.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +99,7 @@ public class Learn extends Fragment {
                 if(presentContinues.getText().equals("present continues")){
                     open_presentContinues();
                 }
-                if(presentContinues.getText().equals("rectangle")){
+                if(presentContinues.getText().equals("prostokat")){
                     open_rectangle();
                 }
             }
@@ -143,7 +146,7 @@ public class Learn extends Fragment {
                 if(pastContinues.getText().equals("past continues")){
                     open_pastContinues();
                 }
-                if(pastContinues.getText().equals("równiania")){
+                if(pastContinues.getText().equals("równania liniowe")){
                     open_equations();
                 }
             }
@@ -177,7 +180,7 @@ public class Learn extends Fragment {
         startActivity(start);
     }
     public void open_pastSimple(){
-        Intent start = new Intent(getContext(),com.example.mathenggame.pastsimple.class);
+        Intent start = new Intent(getContext(),com.example.mathenggame.pastcontinues.class);
         startActivity(start);
 
     }
@@ -215,8 +218,5 @@ public class Learn extends Fragment {
         Intent start = new Intent(getContext(),com.example.mathenggame.verbs.class);
         startActivity(start);
     }
-    public void open_asd(){
-        Intent start = new Intent(getContext(),com.example.mathenggame.pastcontinues.class);
-        startActivity(start);
-    }
+
 }

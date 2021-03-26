@@ -24,6 +24,7 @@ public class Nauka extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nauka);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         sld = new zadania_matematyka(this);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ans_1 =(Button) findViewById(R.id.anwser_1);

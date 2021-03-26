@@ -2,6 +2,7 @@ package com.example.mathenggame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class Best_resoult extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_best_resoult);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         db = new zadania_matematyka(this);
         mm_easy = (TextView) findViewById(R.id.math_re);
         mm_medium = (TextView) findViewById(R.id.math_rm);

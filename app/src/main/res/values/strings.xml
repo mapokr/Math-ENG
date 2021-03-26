@@ -2,12 +2,14 @@
     <string name="app_name">Math&amp;Eng&amp;Game</string>
 
     <string name="present_simple_u">Czasu Present Simple używamy: do opisywania czynności powtarzających się i zwyczajowych, opisywania prawd ogólnych i faktów, opisywania stałych, ciągłych czynności lub stanów.</string>
+
     <string name="present_simple_list">
         <li>Opisując rzeczy</li>\n\n
         <li>Opisywanie, streszczanie filmów</li>\n\n
         <li>Czynności dziejące się przez dłuższy czas</li>\n\n
         <li>Mówiąc o czynnościach powtarzających się</li>
     </string>
+
     <string name="okreslnik_czasu_present_simple">
         W Present Simple bardzo często używamy słówek określających częstotliwość wykonywania czynności:
     </string>
@@ -94,8 +96,67 @@
         <li>Pytanie: WAS/WERE + SUBJECT+ VERB (- ING)</li>\n
         <li>Przeczenie: SUBJECT + WAS/WERE + NOT + VERB</li>\n
     </string>
-
-
+    <string name="square_desc">
+        Kwadrat to czworokąt formeny, którego wszystkie boki są równe oraz przekątne wewnątrz kwadratu przecinają się pod kątem prostym.
+    </string>
+    <string name="square_explanation">
+        <li>A,B,C,D - wierzchołki kwadratu </li>\n
+        <li>a - bok kwadratu</li>\n
+        <li>d - przekątna kwadratu.</li>\n
+    </string>
+    <string name="rectangle_desc">
+        Prostokąt to czworkąt, który posiada 2 pary przeciwległych boków o tej samej długości, przekąte wewnątrz prostokąta przecinają się pod kontem prostym.
+    </string>
+    <string name="rectangle_explanation">
+        <li>A,B,C,D - wierzchołki prostokąta </li>\n
+        <li>a,b - boki prostokąta</li>\n
+        <li>d - przekątnych prostokąta.</li>\n
+    </string>
+    <string name="trapeze_desc">
+        Trapez to czworokąt, w którym przynajmniej dwa boki są do siebie ustawione równolegle.
+    </string>
+    <string name="trapeze_explanation">
+        <li>A,B,C,D - wierzchołki trapezu </li>\n
+        <li>a,b - boki trapezu</li>\n
+        <li>c,d - ramiona trapezu</li>\n
+        <li>h - wysokość trapezu</li>\n
+    </string>
+    <string name="trai_desc">
+        Trójkąt to wielokąt o trzech bokach, istnieje kilka rodzaji trójkątów między innymi: różnoboczny gdzie każdy bok ma inną długość, równoramienny posadający conajmniej dwa boki równe i równoboczny w którym wszystkie boki są równej długości.
+    </string>
+    <string name="trai_explanation">
+        <li>równoramienny: obw = a + 2b</li>\n\n
+        <li>równoboczny: obw =  3 \u2022 a</li>\n\n
+        <li>róznoboczny: obw = a + b + c</li>\n
+    </string>
+    <string name="cube_desc">
+        Sześcian jest prostopadłościanem, którego wszysteki ściany są identycznymi kwadratami
+    </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="cube_explanation">
+        <li>A,B,C,D,E,F,G,H - wierzchołki sześcianu</li>\n
+        <li>a - krawędzie sześcianu</li>\n
+        <li>d - przekątna sześcianu</li>\n
+    </string>
+    <string name="equ_desc">
+        Równanie to dwa wyrażenia algebariczne połączone znakiem równości
+    </string>
+    <string name="equ_desc_2">
+        aby rozwiązać równanie trzeba znaleźć taką liczbę, która po podstawieniu do niewiadomej da po obu stronach równania taki sam wynik.
+    </string>
+    <string name="equ_r_1">
+        Można zauważyć, że da się uprościć powyższe równanie po lewej stronie.
+    </string>
+    <string name="equ_r_2">
+        następnie pozbądźmy się z lewej strony -5, aby to zrobić należy do obu stron dodać 5
+    </string>
+    <string name="equ_r_3">
+        Teraz przenieśmy 2x na prawą stronę aby pozbyć się x z lewej strony równania, można tego dokonać po przez odjęcie -2x z obu stron
+    </string>
+    <string name="equ_r_4">
+        Dzielimy obie strony przez 2 aby został sam x po prawej stronie równania
+    </string>
+    <string name="equ_r_5">
+       rozwiązanie równania: x=5
+    </string>
 </resources>

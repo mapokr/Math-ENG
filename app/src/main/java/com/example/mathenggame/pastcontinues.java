@@ -2,6 +2,7 @@ package com.example.mathenggame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Spannable;
@@ -16,6 +17,7 @@ public class pastcontinues extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pastcontinues);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         change_am_1 = findViewById(R.id.t_i_pastContinues);
         change_am_2 = findViewById(R.id.p_i_pastContinues);
         change_am_3 = findViewById(R.id.pr_i_pastContinues);

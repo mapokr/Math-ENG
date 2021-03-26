@@ -57,6 +57,7 @@ public class flip extends Fragment {
         // Inflate the layout for this fragment
 
         View v = inflater.inflate(R.layout.fragment_flip, container, false);
+        
         sld = new zadania_matematyka(getActivity());
         flip1 = (Button) v.findViewById(R.id.flip_3);
         next = (Button) v.findViewById(R.id.next_button);

@@ -3,6 +3,7 @@ package com.example.mathenggame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +23,7 @@ public class Teach_game extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teach_game);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         sld = new zadania_matematyka(this);
         flip1 = (Button) findViewById(R.id.flip_1);
         next = (Button) findViewById(R.id.next_button);

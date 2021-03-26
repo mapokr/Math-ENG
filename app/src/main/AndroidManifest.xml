@@ -13,6 +13,7 @@
         <activity android:name=".verbs" />
         <activity android:name=".cube" />
         <activity android:name=".trapeze" />
+        <activity android:name=".triangle" />
         <activity android:name=".rectangle" />
         <activity android:name=".futurecontinues" />
         <activity android:name=".pastcontinues" />

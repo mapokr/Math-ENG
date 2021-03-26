@@ -25,7 +25,6 @@ import java.util.Random;
 import static java.lang.Integer.parseInt;
 
 public class zadania_matematyka extends SQLiteOpenHelper {
-    Opcje check_state = new Opcje();
 
         public static final String NAME_DB ="data_quest.db";
         public static final String NAME = "math_easy";
@@ -49,7 +48,7 @@ public class zadania_matematyka extends SQLiteOpenHelper {
 
     public zadania_matematyka(Context context) {
             super(context, NAME_DB, null, 1);
-            // SQLiteDatabase db = this.getWritableDatabase();
+
 
 
         }

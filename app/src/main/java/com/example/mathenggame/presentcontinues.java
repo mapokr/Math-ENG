@@ -2,6 +2,7 @@ package com.example.mathenggame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Spannable;
@@ -15,6 +16,7 @@ public class presentcontinues extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_presentcontinues);
         change_am_1 = findViewById(R.id.t_i_presentcontinues);
         change_am_2 = findViewById(R.id.p_i_presentcontinues);
