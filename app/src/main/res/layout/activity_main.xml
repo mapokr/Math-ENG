@@ -26,19 +26,20 @@
         <Button
             android:id="@+id/start_button"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="220dp"
             android:layout_marginRight="16dp"
+
             android:layout_weight="1"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/button_back"
             android:text="Start"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/setting_button"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="220dp"
             android:layout_weight="1"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/button_back"
             android:text="OPCJE"
             android:textStyle="bold" />
 
@@ -53,29 +54,27 @@
         android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.400"
+        app:layout_constraintVertical_bias="0.688"
         tools:layout_editor_absoluteX="0dp">
 
         <Button
             android:id="@+id/quit_button"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="220dp"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/button_back"
             android:text="wyjście"
-            android:textStyle="bold"
-             />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/sound"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="220dp"
             android:layout_weight="1"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/button_back"
             android:text="Dzwięk"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
     </LinearLayout>
 
 
