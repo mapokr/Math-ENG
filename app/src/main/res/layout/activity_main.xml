@@ -28,9 +28,9 @@
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_marginRight="16dp"
-
+            android:textSize="25sp"
             android:layout_weight="1"
-            android:background="@drawable/button_back"
+            android:background="@drawable/karteczka_c"
             android:text="Start"
             android:textStyle="bold" />
 
@@ -38,8 +38,9 @@
             android:id="@+id/setting_button"
             android:layout_width="match_parent"
             android:layout_height="220dp"
+            android:textSize="25sp"
             android:layout_weight="1"
-            android:background="@drawable/button_back"
+            android:background="@drawable/karteczka_n"
             android:text="OPCJE"
             android:textStyle="bold" />
 
@@ -62,8 +63,9 @@
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_marginRight="16dp"
+            android:textSize="25sp"
             android:layout_weight="1"
-            android:background="@drawable/button_back"
+            android:background="@drawable/karteczka_f"
             android:text="wyjście"
             android:textStyle="bold" />
 
@@ -71,8 +73,9 @@
             android:id="@+id/sound"
             android:layout_width="match_parent"
             android:layout_height="220dp"
+            android:textSize="25sp"
             android:layout_weight="1"
-            android:background="@drawable/button_back"
+            android:background="@drawable/karteczka_z"
             android:text="Dzwięk"
             android:textStyle="bold" />
     </LinearLayout>
