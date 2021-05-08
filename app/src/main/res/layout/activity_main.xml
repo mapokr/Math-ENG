@@ -11,10 +11,11 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         android:padding="10dp"
         android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,20 +29,20 @@
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_marginRight="16dp"
-            android:textSize="25sp"
             android:layout_weight="1"
             android:background="@drawable/karteczka_c"
             android:text="Start"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/setting_button"
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:textSize="25sp"
             android:layout_weight="1"
             android:background="@drawable/karteczka_n"
             android:text="OPCJE"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -79,6 +80,17 @@
             android:text="Dzwięk"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="71dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -104,7 +104,7 @@ public class zadania_matematyka extends SQLiteOpenHelper {
 
         return row;
     }
-
+    // - KROPKA \u2022
     // m_easy
     public boolean insert_value(){
 
@@ -262,27 +262,31 @@ public class zadania_matematyka extends SQLiteOpenHelper {
         try {
             load_state = new FileInputStream("/data/data/com.example.mathenggame/files/level.txt");
         } catch (FileNotFoundException e) {
+            get_text = "2";
             e.printStackTrace();
         }
+        if(load_state!=null){
         try {
             InputStreamReader input = new InputStreamReader(load_state);
             BufferedReader bufor = new BufferedReader(input);
             StringBuilder builder = new StringBuilder();
             get_text=bufor.readLine();
             builder.append(get_text);
-            System.out.println("kotek:"+get_text);
+
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            get_text = "2";
         } catch (IOException e) {
             e.printStackTrace();
         }
         finally {
-            try {
+            try{
                 load_state.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
         }
 
         return get_text;

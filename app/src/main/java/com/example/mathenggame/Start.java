@@ -53,18 +53,22 @@ public class Start extends AppCompatActivity {
     public void teach_game_open(){
         Intent start_game_teach = new Intent(this,Teach_g.class);
         startActivity(start_game_teach);
+        MainActivity.play_sound();
     }
     public void time_game_open(){
         Intent start_game_time = new Intent(this,Game_Time.class);
         startActivity(start_game_time);
+        MainActivity.play_sound();
     }
     public void multi_game_open(){
         Intent Multi_game = new Intent(this,Multi_game.class);
         startActivity(Multi_game);
+        MainActivity.play_sound();
     }
     public void best_score_open(){
         Intent best = new Intent(this,Best_resoult.class);
         startActivity(best);
+        MainActivity.play_sound();
     }
 }
 

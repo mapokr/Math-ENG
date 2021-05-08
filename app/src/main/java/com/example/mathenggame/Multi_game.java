@@ -260,4 +260,10 @@ public class Multi_game extends AppCompatActivity {
             Toast.makeText(this,"Musisz wystartować grę", Toast.LENGTH_SHORT).show();
         }
     }
+    @Override
+    public void onBackPressed() {
+        countb=0;
+        countr=0;
+        super.onBackPressed();
+    }
 }

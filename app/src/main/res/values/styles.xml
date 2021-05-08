@@ -6,20 +6,20 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowTranslucentNavigation">false</item>
-        <item name="fontFamily">@font/ocr_a</item>
+        <!--  <item name="fontFamily">@font/ocr_a</item> -->
 
-    </style>
+  </style>
 
-    <style name="text_h" parent="Widget.AppCompat.TextView">
-        <item name="android:textSize">32dp</item>
-        <item name="android:textColor">@color/red</item>
-        <item name="android:fontFamily">sans-serif-black</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_margin">8dp</item>
-    </style>
+  <style name="text_h" parent="Widget.AppCompat.TextView">
+      <item name="android:textSize">32dp</item>
+      <item name="android:textColor">@color/red</item>
+      <item name="android:fontFamily">sans-serif-black</item>
+      <item name="android:gravity">center</item>
+      <item name="android:layout_margin">8dp</item>
+  </style>
 
-    <style name="text_h2" parent="Widget.AppCompat.TextView">
-        <!-- Customize your theme here. -->
+  <style name="text_h2" parent="Widget.AppCompat.TextView">
+      <!-- Customize your theme here. -->
         <item name="android:textSize">16dp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold|italic</item>

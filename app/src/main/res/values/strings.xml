@@ -132,14 +132,22 @@
     <string name="cube_desc">
         Sześcian jest prostopadłościanem, którego wszysteki ściany są identycznymi kwadratami
     </string>
+    <string name="cubep_desc">
+        Prostopadłościan jest granistosłupem, którego wszystkie sciany są prostokątami.
+    </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cube_explanation">
         <li>A,B,C,D,E,F,G,H - wierzchołki sześcianu</li>\n
         <li>a - krawędzie sześcianu</li>\n
         <li>d - przekątna sześcianu</li>\n
     </string>
+    <string name="cubep_explanation">
+        <li>A,B,C,D,E,F,G,H - wierzchołki prostopadłościanu</li>\n
+        <li>a,b,c - krawędzie prostopadłościanu</li>\n
+        <li>d - przekątna prostopadłościanu</li>\n
+    </string>
     <string name="equ_desc">
-        Równanie to dwa wyrażenia algebariczne połączone znakiem równości
+        Równanie to dwa wyrażenia algebariczne połączone znakiem równości.
     </string>
     <string name="equ_desc_2">
         aby rozwiązać równanie trzeba znaleźć taką liczbę, która po podstawieniu do niewiadomej da po obu stronach równania taki sam wynik.
@@ -148,15 +156,65 @@
         Można zauważyć, że da się uprościć powyższe równanie po lewej stronie.
     </string>
     <string name="equ_r_2">
-        następnie pozbądźmy się z lewej strony -5, aby to zrobić należy do obu stron dodać 5
+        następnie pozbądźmy się z lewej strony -5, aby to zrobić należy do obu stron dodać 5.
     </string>
     <string name="equ_r_3">
-        Teraz przenieśmy 2x na prawą stronę aby pozbyć się x z lewej strony równania, można tego dokonać po przez odjęcie -2x z obu stron
+        Teraz przenieśmy 2x na prawą stronę aby pozbyć się x z lewej strony równania, można tego dokonać po przez odjęcie -2x z obu stron.
     </string>
     <string name="equ_r_4">
-        Dzielimy obie strony przez 2 aby został sam x po prawej stronie równania
+        Dzielimy obie strony przez 2 aby został sam x po prawej stronie równania.
     </string>
     <string name="equ_r_5">
        rozwiązanie równania: x=5
     </string>
+    <string name="equk_r_1">
+       Równanie kwadratowe w postaći ogólnej wygląda następująco:
+    </string>
+    <string name="equk_r_2">
+      ax²+bx+c=0
+    </string>
+    <string name="equk_r_3">
+      współczynniki a,b,c są liczbami i a ≠ 0.
+    </string>
+    <string name="equk_r_4">
+     Aby rozwiązać takie równanie trzeba wyliczyć deltę(Δ) ze wzoru:
+    </string>
+    <string name="equk_r_5">
+     Jeśli Δ > 0, oznacza to, że równanie ma dwa rozwiązania:
+    </string>
+    <string name="equk_r_6">
+     Jeśli Δ = 0, oznacza to, że równanie ma jedno rozwiązania:
+    </string>
+    <string name="equk_r_7">
+     Natomiast jeśli Δ \u003C 0 równianie nie ma rozwiązan.
+    </string>
+    <string name="equk_r_8">
+     Na poczaku obliczmy deltę:
+    </string>
+    <string name="equk_r_9">
+     Delta wyszłą dodatni, oznacza to, że równianie ma dwa rozwiązania.
+    </string>
+    <string name="equk_r_10">
+     Obliczmy teraz x\u2081 i x\u2082
+    </string>
+    <string name="log_1">
+     Logarytmowanie jest operacją odwrotną do potęgowania. Polega na obliczeniu wykładnika potęgi.
+    </string>
+    <string name="log_2">
+     Taki zapis czytamy: Logarytm przy podstawie z a z liczby b.
+    </string>
+    <string name="log_3">
+    Aby obliczyć logarytm, trzeba zgadnąć do, której potęgi musimy ponieść liczbę 3 aby otrzymac 27.
+    </string>
+    <string name="log_4">
+        log₃27 = 3\n\n
+        ponieważ\n\n
+        3³= 3 \u20223 3 \u20223 3 = 27\n
+    </string>
+    <string name="log_5">
+         a > 0\n\n
+         a ≠ 1\n\n
+         b > 0
+    </string>
+
 </resources>

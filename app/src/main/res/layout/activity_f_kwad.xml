@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/tab_b"
-    tools:context=".equations">
+    tools:context=".f_kwad">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Równania liniowe" />
+                android:text="Równanie kwadratowe" />
 
             <TextView
                 android:id="@+id/description"
@@ -43,7 +43,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="@string/equ_desc" />
+                android:text="@string/equk_r_1" />
 
             <TextView
                 android:id="@+id/obw_cube"
@@ -55,7 +55,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
                 android:gravity="start"
-                android:text="@string/equ_desc_2" />
+                android:text="@string/equk_r_2" />
 
             <TextView
                 style="@style/text_h2"
@@ -66,7 +66,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="Przykład: 4x - 2x + 5 = 4x - 5" />
+                android:text="@string/equk_r_3" />
 
 
             <TextView
@@ -78,7 +78,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="@string/equ_r_1" />
+                android:text="@string/equk_r_4" />
 
             <TextView
                 style="@style/text_h2"
@@ -89,7 +89,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="2x + 5 = 4x - 5" />
+                android:text="Δ = b² − 4ac" />
 
             <TextView
                 style="@style/text_h2"
@@ -100,29 +100,20 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="@string/equ_r_2" />
+                android:text="@string/equk_r_5" />
 
-            <TextView
-                style="@style/text_h2"
-                android:id="@+id/wy_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:text="2x + 5 + 5 = 4x - 5 + 5" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/k_1" />
 
-            <TextView
-                style="@style/text_h2"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:text="2x + 10 = 4x" />
+            <ImageView
+                android:id="@+id/imageView_2"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                app:srcCompat="@drawable/k_2" />
 
             <TextView
                 style="@style/text_h2"
@@ -133,18 +124,35 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="@string/equ_r_3" />
+                android:text="@string/equk_r_6" />
+
+            <ImageView
+                android:id="@+id/imageView_3"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                app:srcCompat="@drawable/k_3" />
 
             <TextView
                 style="@style/text_h2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/equk_r_7" />
+
+            <TextView
                 android:id="@+id/wy_2"
+                style="@style/text_h2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="2x + 10 - 2x = 4x - 2x" />
+                android:text="przykładowe zadanie: " />
 
             <TextView
                 style="@style/text_h2"
@@ -155,7 +163,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="10 = 2x" />
+                android:text="2x² + 8x −10 = 0" />
 
             <TextView
                 style="@style/text_h2"
@@ -166,18 +174,18 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="@string/equ_r_4" />
+                android:text="@string/equk_r_8" />
 
             <TextView
-                style="@style/text_h2"
                 android:id="@+id/wy_3"
+                style="@style/text_h2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="10 = 2x //:2" />
+                android:text=" Δ = 8² - 4 \u2022 2 \u2022 (-10) = 144" />
 
             <TextView
                 style="@style/text_h2"
@@ -188,7 +196,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="5 = x" />
+                android:text="\u221Aa = \u221A144 = 12" />
 
             <TextView
                 style="@style/text_h2"
@@ -199,9 +207,44 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="@string/equ_r_5" />
+                android:text="@string/equk_r_9" />
+
+            <TextView
+                style="@style/text_h2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/equk_r_10" />
+            <ImageView
+                android:id="@+id/imageView_4"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/k_4" />
+            <ImageView
+                android:id="@+id/imageView_5"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/k_5" />
+
+            <TextView
+                style="@style/text_h2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="Rozwiązaniem to: -5 i 1" />
 
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

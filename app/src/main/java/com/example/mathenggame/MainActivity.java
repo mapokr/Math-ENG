@@ -6,17 +6,20 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     public zadania_matematyka database;
-    private Button setting_button,start_button,quit_button;
+    private Button setting_button,start_button,quit_button,sound_button;
+    private ImageView im;
     private boolean count=true;
-    private Opcje state;
+    private boolean flag_sound = true;
     static MediaPlayer hit_board;
 
     @Override
@@ -38,10 +41,29 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("end",count);
             editor.apply();
         }
-
+        im = findViewById(R.id.imageView2);
         setting_button = (Button) findViewById(R.id.setting_button);
         start_button = (Button) findViewById(R.id.start_button);
         quit_button = (Button) findViewById(R.id.quit_button);
+        sound_button = findViewById(R.id.sound);
+        sound_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(flag_sound){
+                    hit_board.setVolume(0,0);
+                    flag_sound = false;
+                    im.setImageResource(android.R.drawable.ic_lock_silent_mode);
+                }
+                else{
+                    hit_board.setVolume(1,1);
+                    flag_sound = true;
+                    im.setImageResource(android.R.drawable.ic_lock_silent_mode_off);
+
+                }
+
+
+            }
+        });
 
         setting_button.setOnClickListener(new View.OnClickListener() {
             @Override

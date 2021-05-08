@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -24,6 +25,7 @@ public class Game_Time extends AppCompatActivity {
     private zadania_matematyka sld;
     private static TextView question,count_view;
     private Cursor c;
+    private boolean flag = false;
     private static String tmp=" ";
     private static CountDownTimer cdt;
     @Override
@@ -31,6 +33,7 @@ public class Game_Time extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game__time);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         sld = new zadania_matematyka(this);
         ans_1 =(Button) findViewById(R.id.anwser_1);
         ans_2 =(Button) findViewById(R.id.anwser_2);
@@ -45,6 +48,7 @@ public class Game_Time extends AppCompatActivity {
             public void onClick(View v) {
                 MainActivity.play_sound();
                 set_quest();
+                flag = true;
                 set_timer();
                 v.setVisibility(v.GONE);
             }
@@ -54,6 +58,7 @@ public class Game_Time extends AppCompatActivity {
             public void onClick(View v) {
                 click_button(1);
                 MainActivity.play_sound();
+
             }
         });
         ans_2.setOnClickListener(new View.OnClickListener() {
@@ -162,6 +167,8 @@ public class Game_Time extends AppCompatActivity {
             @Override
             public void onTick(long millisUntilFinished) {
                 time.setText("Czas:"+millisUntilFinished/1000);
+
+
             }
 
             @Override
@@ -177,6 +184,7 @@ public class Game_Time extends AppCompatActivity {
                }
 
             }
+
         };
         cdt.start();
     }
@@ -207,4 +215,13 @@ public class Game_Time extends AppCompatActivity {
     }
 
 
+
+    public void onDestroy() {
+        if(flag) {
+            cdt.cancel();
+            count = 0;
+            tmp = " ";
+        }
+        super.onDestroy();
+    }
 }

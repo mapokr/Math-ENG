@@ -62,14 +62,16 @@ public class Learn extends Fragment {
         pastSimple = (Button) v.findViewById(R.id.past_simple);
         int x = parseInt(state.loadState());
         if(x<3){
-            presentSimple.setText("kwadrat");
-            presentContinues.setText("prostokat");
-            presentPerfect.setText("trójkąt");
-            futureSimple.setText("sześcian");
-            pastContinues.setText("równania liniowe");
+            presentSimple.setText("planimetria");
+            presentContinues.setText("figury przestrzenne");
+            presentPerfect.setText("logarytmy");
+            futureSimple.setText("równianie kwadratowe");
+            pastContinues.setText("równanie liniowe");
             futureContinues.setText("nothing ");
             futureContinues.setVisibility(View.INVISIBLE);
-            pastSimple.setText("trapez");
+            pastSimple.setText("równanie liniowe");
+            pastContinues.setVisibility(View.INVISIBLE);
+
         }
         if(x>=3)
         {
@@ -80,6 +82,7 @@ public class Learn extends Fragment {
             pastContinues.setText("past continues");
             futureContinues.setText("czasowniki nieregularne");
             futureContinues.setVisibility(View.VISIBLE);
+            presentPerfect.setVisibility(View.VISIBLE);
             pastSimple.setText("past simple");
         }
         presentSimple.setOnClickListener(new View.OnClickListener() {
@@ -88,8 +91,8 @@ public class Learn extends Fragment {
                 if(presentSimple.getText().equals("present simple")){
                     open_presentSimple();
                 }
-                if(presentSimple.getText().equals("kwadrat")){
-                    open_square();
+                if(presentSimple.getText().equals("planimetria")){
+                    open_plan();
                 }
             }
         });
@@ -99,8 +102,8 @@ public class Learn extends Fragment {
                 if(presentContinues.getText().equals("present continues")){
                     open_presentContinues();
                 }
-                if(presentContinues.getText().equals("prostokat")){
-                    open_rectangle();
+                if(presentContinues.getText().equals("figury przestrzenne")){
+                    open_fig();
                 }
             }
 
@@ -111,8 +114,8 @@ public class Learn extends Fragment {
                 if(pastSimple.getText().equals("past simple")){
                     open_pastSimple();
                 }
-                if(pastSimple.getText().equals("trapez")){
-                    open_trapeze();
+                if(pastSimple.getText().equals("równanie liniowe")){
+                    open_equations();
                 }
             }
 
@@ -123,8 +126,8 @@ public class Learn extends Fragment {
                 if(presentPerfect.getText().equals("present perfect")){
                     open_presentperfect();
                 }
-                if(presentPerfect.getText().equals("trójkąt")){
-                    open_triangle();
+                if(presentPerfect.getText().equals("logarytmy")){
+                    open_lg();
             }
             }
 
@@ -135,8 +138,8 @@ public class Learn extends Fragment {
                 if(futureSimple.getText().equals("future simple")){
                     open_futureSimple();
                 }
-                if(futureSimple.getText().equals("sześcian")){
-                    open_cube();
+                if(futureSimple.getText().equals("równianie kwadratowe")){
+                    open_fk();
                 }
             }
         });
@@ -146,7 +149,7 @@ public class Learn extends Fragment {
                 if(pastContinues.getText().equals("past continues")){
                     open_pastContinues();
                 }
-                if(pastContinues.getText().equals("równania liniowe")){
+                if(pastContinues.getText().equals("równanie liniowe")){
                     open_equations();
                 }
             }
@@ -165,58 +168,78 @@ public class Learn extends Fragment {
     public void open_presentSimple(){
         Intent start = new Intent(getContext(), com.example.mathenggame.presentSimple.class);
         startActivity(start);
+        MainActivity.play_sound();
     }
-    public void open_square(){
-        Intent start = new Intent(getContext(), com.example.mathenggame.square.class);
+    public void open_plan(){
+        Intent start = new Intent(getContext(), com.example.mathenggame.planimetria.class);
         startActivity(start);
+        MainActivity.play_sound();
     }
     public void open_presentContinues(){
         Intent start = new Intent(getContext(),com.example.mathenggame.presentcontinues.class);
         startActivity(start);
+        MainActivity.play_sound();
 
     }
-    public void open_rectangle(){
-        Intent start = new Intent(getContext(),com.example.mathenggame.rectangle.class);
+    public void open_fig(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.fig_przes.class);
         startActivity(start);
+        MainActivity.play_sound();
     }
     public void open_pastSimple(){
         Intent start = new Intent(getContext(),com.example.mathenggame.pastcontinues.class);
         startActivity(start);
+        MainActivity.play_sound();
 
     }
-    public void open_trapeze(){
-        Intent start = new Intent(getContext(),com.example.mathenggame.trapeze.class);
-        startActivity(start);
-    }
+
     public void open_presentperfect(){
         Intent start = new Intent(getContext(),com.example.mathenggame.presentperfect.class);
         startActivity(start);
+        MainActivity.play_sound();
 
     }
     public void open_futureSimple(){
         Intent start = new Intent(getContext(),com.example.mathenggame.futuresimple.class);
         startActivity(start);
+        MainActivity.play_sound();
 
     }
     public void open_triangle(){
         Intent start = new Intent(getContext(),com.example.mathenggame.triangle.class);
         startActivity(start);
+        MainActivity.play_sound();
     }
     public void open_cube(){
         Intent start = new Intent(getContext(),com.example.mathenggame.cube.class);
         startActivity(start);
+        MainActivity.play_sound();
     }
     public void open_equations(){
         Intent start = new Intent(getContext(),com.example.mathenggame.equations.class);
         startActivity(start);
+        MainActivity.play_sound();
     }
     public void open_pastContinues(){
         Intent start = new Intent(getContext(),com.example.mathenggame.pastcontinues.class);
         startActivity(start);
+        MainActivity.play_sound();
     }
     public void open_reg(){
         Intent start = new Intent(getContext(),com.example.mathenggame.verbs.class);
         startActivity(start);
+        MainActivity.play_sound();
     }
+    public void open_fk(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.f_kwad.class);
+        startActivity(start);
+        MainActivity.play_sound();
+    }
+    public void open_lg(){
+        Intent start = new Intent(getContext(),com.example.mathenggame.log_ac.class);
+        startActivity(start);
+        MainActivity.play_sound();
+    }
+
 
 }
