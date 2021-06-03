@@ -66,7 +66,7 @@ public class Quiz extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity.play_sound();
-                set_quest();
+                set_quest_quiz();
                 v.setVisibility(v.GONE);
             }
         });
@@ -95,45 +95,38 @@ public class Quiz extends Fragment {
         });
         return v;
     }
+
     public void click_button(int x){
         if(!tmp.equals(" ")) {
             switch (x) {
                 case 1:
                     if (ans_1.getText().equals(tmp)) {
-
                         count += 1;
-                        set_quest();
-
-
-
+                        set_quest_quiz();
                     } else {
-                        set_quest();
+                        set_quest_quiz();
                     }
                     break;
+
                 case 2:
                     if (ans_2.getText().equals(tmp)) {
-                        //  System.out.println("2");
+
                         count += 1;
-                        set_quest();
-
-
+                        set_quest_quiz();
                     } else {
-                        set_quest();
+                        set_quest_quiz();
                     }
                     break;
                 case 3:
                     if (ans_3.getText().equals(tmp)) {
-                        //  System.out.println("3");
                         count += 1;
-                        set_quest();
-
-
+                        set_quest_quiz();
                     } else {
-                        set_quest();
+                        set_quest_quiz();
                     }
                     break;
                 default:
-                    set_quest();
+                    set_quest_quiz();
 
             }
         }
@@ -141,26 +134,21 @@ public class Quiz extends Fragment {
             Toast.makeText(getActivity(),"Musisz wystartować grę", Toast.LENGTH_SHORT).show();
         }
     }
-    public void set_quest(){
-        c =sld.GetRandRowDD();
 
+    public void set_quest_quiz(){
+        c =sld.GetRandRowDD();
         if(c.getCount()==0){
-            System.out.println("on_click_f");
+            System.out.println("błąd odczytu");
         }
         else{
             while(c.moveToNext()){
-
                 ans_1.setText(c.getString(1).toString());
                 ans_2.setText(c.getString(3).toString());
                 ans_3.setText(c.getString(2).toString());
                 question.setText(c.getString(0).toString());
                 count_view.setText("PKT: "+count);
                 tmp =c.getString(4).toString();
-
-
             }
-
         }
-
     }
 }

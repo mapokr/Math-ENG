@@ -129,14 +129,29 @@
         <li>równoboczny: obw =  3 \u2022 a</li>\n\n
         <li>róznoboczny: obw = a + b + c</li>\n
     </string>
+    <string name="walec_explanation">
+        <li>r - promień podstawy walca</li>\n\n
+        <li>h - wysokość walca</li>\n\n
+    </string>
     <string name="cube_desc">
         Sześcian jest prostopadłościanem, którego wszysteki ściany są identycznymi kwadratami
+    </string>
+    <string name="kul_desc">
+        Kula powstaje przez obrót dowolnego koła wokół jego średnicy.
     </string>
     <string name="cubep_desc">
         Prostopadłościan jest granistosłupem, którego wszystkie sciany są prostokątami.
     </string>
+    <string name="wal_desc">
+        Walec jest wynikiem obrotu dowolnego prostokąta wokół prostej zawierającej jeden z jego boków.
+    </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cube_explanation">
+        <li>A,B,C,D,E,F,G,H - wierzchołki sześcianu</li>\n
+        <li>a - krawędzie sześcianu</li>\n
+        <li>d - przekątna sześcianu</li>\n
+    </string>
+    <string name="wal_explanation">
         <li>A,B,C,D,E,F,G,H - wierzchołki sześcianu</li>\n
         <li>a - krawędzie sześcianu</li>\n
         <li>d - przekątna sześcianu</li>\n
@@ -209,12 +224,15 @@
     <string name="log_4">
         log₃27 = 3\n\n
         ponieważ\n\n
-        3³= 3 \u20223 3 \u20223 3 = 27\n
+        3³= 3 \u2022 3 \u2022 3 = 27\n
     </string>
     <string name="log_5">
          a > 0\n\n
          a ≠ 1\n\n
          b > 0
     </string>
+    <string name="fiszki">Fiszki</string>
+    <string name="teoria">Teoria</string>
+    <string name="quiz">Quiz</string>
 
 </resources>

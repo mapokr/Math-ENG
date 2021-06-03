@@ -3,6 +3,7 @@ package com.example.mathenggame;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -162,15 +163,14 @@ public class Game_Time extends AppCompatActivity {
         }
 
     }
+
     public void set_timer(){
         cdt = new CountDownTimer(15000,1000) {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onTick(long millisUntilFinished) {
                 time.setText("Czas:"+millisUntilFinished/1000);
-
-
             }
-
             @Override
             public void onFinish() {
 
@@ -179,18 +179,14 @@ public class Game_Time extends AppCompatActivity {
                    save_new_res();
                }catch (Exception e){
                     System.out.println("nie udalo sie zapisac wyniku");
-               } finally {
-
                }
-
             }
-
         };
         cdt.start();
     }
+
     public void save_new_res(){
         AlertDialog.Builder Ad;
-
         Ad = new AlertDialog.Builder(this).setTitle("KONIEC GRY").setMessage("ilość punktów: "+count);
         
         Ad.setPositiveButton("Zagraj Ponownie", new DialogInterface.OnClickListener() {

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-<item android:title="Fiszki"
-android:id="@+id/Flip"
-android:icon="@drawable/ic_flip_to_back"/>
-<item android:title="Teoria"
-android:id="@+id/learn"
-android:icon="@drawable/ic_menu_book"/>
-<item android:title="Quiz"
-android:id="@+id/quiz2"
-android:icon="@drawable/ic_try"/>
+<item android:title="@string/fiszki"
+    android:id="@+id/Flip"
+    android:icon="@drawable/ic_flip_to_back"/>
 
-    </menu>
+<item android:title="@string/teoria"
+    android:id="@+id/learn"
+    android:icon="@drawable/ic_menu_book"/>
+
+<item android:title="@string/quiz"
+    android:id="@+id/quiz2"
+    android:icon="@drawable/ic_try"/>
+</menu>
+

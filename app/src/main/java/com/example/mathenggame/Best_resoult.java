@@ -32,21 +32,15 @@ public class Best_resoult extends AppCompatActivity {
         Viev_all();
     }
     public void Viev_all() {
-
         for (int x = 0; x<6 ;x++) {
             Cursor c = db.Get_data(x);
             if (c.getCount() == 0) {
                 System.out.println("blad pobrania danych");
-
             }
-
             while (c.moveToNext()) {
                 res.add(c.getString(0).toString());
                 System.out.println(c.getString(0).toString());
-
             }
-
-
         }
         mm_easy.setText("Matematyka łatwa: "+res.get(0).toString());
         mm_medium.setText("Matematyka średna: "+res.get(1).toString());

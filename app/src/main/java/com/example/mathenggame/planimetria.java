@@ -35,7 +35,7 @@ public class planimetria extends AppCompatActivity {
         trapeze.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                open_rectangle();
+                open_trapeze();
             }
         });
         rectangle.setOnClickListener(new View.OnClickListener() {

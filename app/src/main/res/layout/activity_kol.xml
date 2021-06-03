@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/tab_b"
-    tools:context=".triangle">
+    tools:context=".kol">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Trójkąty" />
+                android:text="Kula" />
 
             <TextView
                 android:id="@+id/description"
@@ -43,39 +43,45 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="@string/trai_desc" />
-
-            <TextView
-                style="@style/text_h2"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:text="Wzór na obwód poszczególnych trójkątów" />
-
-            <TextView
-                android:id="@+id/obw_tria"
-                style="@style/text_h2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:gravity="start"
-                android:text="@string/trai_explanation"
-                android:textAlignment="textStart" />
+                android:text="@string/kul_desc" />
 
             <ImageView
                 android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/kula" />
+
+
+            <TextView
+                style="@style/text_h2"
+                android:id="@+id/obw_cube"
                 android:layout_width="wrap_content"
-                android:layout_height="178dp"
-                app:srcCompat="@drawable/tra_rr" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="r - promień kuli " />
+            <TextView
+                style="@style/text_h2"
 
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="Wzór na pole kuli" />
+            <TextView
+                style="@style/text_h2"
+                android:layout_width="wrap_content"
+                android:id="@+id/obw_c"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="P=4πr²" />
             <TextView
                 style="@style/text_h2"
                 android:layout_width="wrap_content"
@@ -84,20 +90,20 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="Wzór na pole trójkąta" />
-
+                android:text="Wzór na objętość kuli" />
             <TextView
-                android:id="@+id/pw_tria"
                 style="@style/text_h2"
+                android:id="@+id/v_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="P = ½ \u2022 (a \u2022 h)" />
+                android:text="V=1 1⁄3πr\u00B3" />
 
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -63,7 +63,7 @@ public class Learn extends Fragment {
         int x = parseInt(state.loadState());
         if(x<3){
             presentSimple.setText("planimetria");
-            presentContinues.setText("figury przestrzenne");
+            presentContinues.setText("stereometria");
             presentPerfect.setText("logarytmy");
             futureSimple.setText("równianie kwadratowe");
             pastContinues.setText("równanie liniowe");
@@ -102,7 +102,7 @@ public class Learn extends Fragment {
                 if(presentContinues.getText().equals("present continues")){
                     open_presentContinues();
                 }
-                if(presentContinues.getText().equals("figury przestrzenne")){
+                if(presentContinues.getText().equals("stereometria")){
                     open_fig();
                 }
             }

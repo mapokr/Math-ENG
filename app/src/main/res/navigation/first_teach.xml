@@ -20,3 +20,4 @@
         android:label="fragment_quiz"
         tools:layout="@layout/fragment_quiz" />
 </navigation>
+

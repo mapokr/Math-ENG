@@ -33,7 +33,7 @@ public class Multi_game extends AppCompatActivity {
         b_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click_button(1);
+                send_reply(1);
                 MainActivity.play_sound();
             }
         });
@@ -41,7 +41,7 @@ public class Multi_game extends AppCompatActivity {
         b_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click_button(2);
+                send_reply(2);
                 MainActivity.play_sound();
             }
         });
@@ -49,7 +49,7 @@ public class Multi_game extends AppCompatActivity {
         b_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click_button(3);
+                send_reply(3);
                 MainActivity.play_sound();
             }
         });
@@ -57,7 +57,7 @@ public class Multi_game extends AppCompatActivity {
         r_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click_button(4);
+                send_reply(4);
                 MainActivity.play_sound();
             }
         });
@@ -65,7 +65,7 @@ public class Multi_game extends AppCompatActivity {
         r_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click_button(5);
+                send_reply(5);
                 MainActivity.play_sound();
             }
         });
@@ -73,7 +73,7 @@ public class Multi_game extends AppCompatActivity {
         r_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click_button(6);
+                send_reply(6);
                 MainActivity.play_sound();
             }
         });
@@ -88,8 +88,8 @@ public class Multi_game extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 MainActivity.play_sound();
-                set_quest(1);
-                set_quest(2);
+                set_quest_multi(1);
+                set_quest_multi(2);
                 v.setVisibility(v.GONE);
                 r_p.setVisibility(View.VISIBLE);
                 b_p.setVisibility(View.VISIBLE);
@@ -99,11 +99,13 @@ public class Multi_game extends AppCompatActivity {
 
     }
 
-    public void set_quest(int x) {
+    public void set_quest_multi(int x) {
         AlertDialog.Builder Ad;
         if(countb==5){
             Start_multi.setVisibility(View.VISIBLE);
-            Ad = new AlertDialog.Builder(this).setTitle("KONIEC GRY").setMessage("Wygrał niebieski\n").setMessage("Niebieski:"+countb+" pkt\t"+"Czerwony:"+countr+" pkt");
+            Ad = new AlertDialog.Builder(this).setTitle("KONIEC GRY").
+                    setMessage("Wygrał gracz nr 1\n").
+                    setMessage("gracz nr 1:"+countb+" pkt\t"+"gracz nr 2:"+countr+" pkt");
             Ad.setPositiveButton("Zagraj Ponownie", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -115,13 +117,11 @@ public class Multi_game extends AppCompatActivity {
             });
             AlertDialog as = Ad.create();
             as.show();
-
-
-
         }
+
         if(countr==5){
             Start_multi.setVisibility(View.VISIBLE);
-            Ad = new AlertDialog.Builder(this).setTitle("KONIEC GRY").setMessage("Wygrał Czerwonyi\n").setMessage("Niebieski:"+countb+" pkt\t"+"Czerwony:"+countr+" pkt");
+            Ad = new AlertDialog.Builder(this).setTitle("KONIEC GRY").setMessage("Wygrał gracz nr 2\n").setMessage("gracz nr 1:"+countb+" pkt\t"+"gracz nr 2:"+countr+" pkt");
             Ad.setPositiveButton("Zagraj Ponownie", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -159,30 +159,27 @@ public class Multi_game extends AppCompatActivity {
             }
         }
     }
-    public void click_button(int x){
+
+    public void send_reply(int x){
         if(!tmpb.equals(" ") || !tmpr.equals(" ")) {
             switch (x) {
                 case 1:
                     if (b_1.getText().equals(tmpb)) {
-
                         countb += 1;
-                        set_quest(1);
-
-
-
+                        set_quest_multi(1);
                     } else {
                         if(countb>0) {
                             countb--;
                         }
-                        set_quest(1);
-
+                        set_quest_multi(1);
                     }
                     break;
+
                 case 2:
                     if (b_2.getText().equals(tmpb)) {
                         //  System.out.println("2");
                         countb += 1;
-                        set_quest(1);
+                        set_quest_multi(1);
 
 
                     } else {
@@ -190,69 +187,69 @@ public class Multi_game extends AppCompatActivity {
                         if(countb>0)
                         {
                         countb--;}
-                        set_quest(1);
+                        set_quest_multi(1);
                     }
                     break;
                 case 3:
                     if (b_3.getText().equals(tmpb)) {
                         //  System.out.println("3");
                         countb += 1;
-                        set_quest(1);
+                        set_quest_multi(1);
 
 
                     } else {
 
                         if(countb>0)
                         {countb--;}
-                        set_quest(1);
+                        set_quest_multi(1);
                     }
                     break;
                 case 4:
                     if (r_1.getText().equals(tmpr)) {
                         //  System.out.println("3");
                         countr += 1;
-                        set_quest(2);
+                        set_quest_multi(2);
 
 
                     } else {
 
                         if(countr>0)
                         { countr--;}
-                        set_quest(2);
+                        set_quest_multi(2);
                     }
                     break;
                 case 5:
                     if (r_2.getText().equals(tmpr)) {
                         //  System.out.println("3");
                         countr += 1;
-                        set_quest(2);
+                        set_quest_multi(2);
 
 
                     } else {
 
                         if(countr>0)
                         {countr--;}
-                        set_quest(2);
+                        set_quest_multi(2);
                     }
                     break;
                 case 6:
                     if (r_3.getText().equals(tmpr)) {
                         //  System.out.println("3");
                         countr += 1;
-                        set_quest(2);
+                        set_quest_multi(2);
 
 
                     } else {
 
                         if(countr>0)
                         { countr--;}
-                        set_quest(2);
+                        set_quest_multi(2);
 
                     }
                     break;
                 default:
-                    set_quest(1);
-                    set_quest(2);
+                    set_quest_multi(1);
+                    set_quest_multi(2);
 
             }
         }

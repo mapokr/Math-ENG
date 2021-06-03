@@ -67,50 +67,48 @@ public class flip extends Fragment {
                 set_quest();
                 MainActivity.play_sound();
                 count=0;
-                next.setText("NEXT");
+                next.setText("Następna");
 
             }
         });
         flip1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tran_button();
+                transform_button();
                 MainActivity.play_sound();
 
             }
         });
        return v;
     }
-    public void tran_button() {
+
+    public void transform_button() {
         Handler handler = new Handler();
         if (count == 0) {
             flip1.animate().scaleX(0);
             flip1.animate().start();
             new Handler().postDelayed(new Runnable() {
-                                          @Override
-                                          public void run() {
-                                              flip1.animate().scaleX(1);
-                                              flip1.animate().start();
-                                              flip1.setText(tmp);
-                                              count++;
-                                          }
-                                      }, TIME
+                @Override
+                public void run() {
+                    flip1.animate().scaleX(1);
+                    flip1.animate().start();
+                    flip1.setText(tmp);
+                    count++;
+                }
+                }, TIME
             );
-
         } else {
-
             flip1.animate().scaleX(0);
             flip1.animate().start();
             new Handler().postDelayed(new Runnable() {
-
-                                          @Override
-                                          public void run() {
-                                              flip1.animate().scaleX(1);
-                                              flip1.animate().start();
-                                              flip1.setText(tmp2);
-                                              count--;
-                                          }
-                                      }, TIME
+                @Override
+                public void run() {
+                    flip1.animate().scaleX(1);
+                    flip1.animate().start();
+                    flip1.setText(tmp2);
+                    count--;
+                }
+                }, TIME
             );
 
 
@@ -118,10 +116,12 @@ public class flip extends Fragment {
 
         }
     }
-    public void set_quest(){
-        c =sld.GetRandOne();
+
+    public void set_quest()
+    {
+        c = sld.GetRandOne();
         if(c.getCount()==0){
-            System.out.println("on_click_f");
+            System.out.println("bląd odczytu");
         }
         else{
             while(c.moveToNext()){
@@ -133,4 +133,6 @@ public class flip extends Fragment {
             }
 
         }
-}}
+    }
+
+}
